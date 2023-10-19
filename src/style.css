@@ -11,6 +11,17 @@ body {
   background: #0f172a;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #4b5563;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #14b8a6;
+
+}
+
 header {
   position: absolute;
   top: 0;
@@ -104,6 +115,12 @@ nav ul li a {
   border-radius: 10px 0 10px 0;
   transition: 0.3s ease;
   border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a svg {
+  margin-right: 8px;
 }
 
 nav ul li:hover a {
@@ -171,7 +188,7 @@ nav ul li:hover a {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  width: 130px;
+  width: 150px;
   height: 45px;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -188,7 +205,7 @@ nav ul li:hover a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 130px;
+  width: 150px;
   height: 45px;
   border-radius: 10px;
   font-size: 1rem;
