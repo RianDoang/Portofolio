@@ -12,46 +12,37 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
   background-color: #4b5563;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background-color: #14b8a6;
-
-}
-
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  height: 80px;
-  align-items: center;
-  background: transparent;
 }
 
 .container {
-  width: 92%;
+  width: 93%;
   margin: 0 auto;
 }
 
-header .container .navbar {
-  position: relative;
+nav {
+  background: transparent;
+  width: 100%;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar .logo a {
-  display: block;
+nav .nameTag a {
+  text-decoration: none;
   font-size: 22px;
   line-height: 28px;
-  font-weight: bold;
-  text-decoration: none;
+  font-weight: 700;
   color: #f8fafc;
+  margin-left: 55px;
+  letter-spacing: 1px;
   border-bottom: 1px solid transparent;
   border-radius: 2px;
   letter-spacing: 1px;
@@ -59,45 +50,14 @@ header .container .navbar {
   transition-delay: 0.3s;
 }
 
-.navbar .logo a:hover {
+nav .nameTag a:hover {
   border-bottom: 1px solid rgb(128, 128, 128);
-}
-
-.navbar .hamburger-menu {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  padding: 3px 5px;
-}
-
-.hamburger-menu span {
-  border-radius: 5px;
-  width: 30px;
-  height: 3px;
-  display: block;
-  margin: 3px 0;
-  background-color: aqua;
-}
-
-.hamburger-menu span:nth-child(1) {
-  background-color: burlywood;
-}
-
-.hamburger-menu span:nth-child(2) {
-  background-color: gray;
-}
-
-.hamburger-menu span:nth-child(3) {
-  background-color: burlywood;
-}
-
-.navbar nav {
-  padding: 5px 10px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
+  margin-right: 65px;
 }
 
 nav ul li {
@@ -128,62 +88,65 @@ nav ul li:hover a {
 }
 
 #home {
-  padding-top: 144px;
+  padding-top: 45px;
 }
 
-.container .profile {
+.container .portHome {
   display: flex;
 }
 
-.profile .DeskProf {
-  width: 52%;
+.portHome .portDesk {
+  width: 50%;
   align-self: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 1rem;
+  margin-top: 10px;
 }
 
-.DeskProf h1 {
-  font-weight: 600;
-  color: #14b8a6;
+.portDesk h1 {
   font-size: 20px;
   line-height: 28px;
+  font-weight: 600;
+  color: #14b8a6;
 }
 
-.DeskProf h1 span {
-  margin-top: 0.25rem;
-  display: block;
+.portDesk h1 span {
   font-size: 48px;
   line-height: 48px;
-  font-weight: 700;
   color: #f8fafc;
+  font-weight: 700;
+  margin-top: 0.25rem;
 }
 
-.DeskProf h2 {
-  margin-bottom: 1.25rem;
+.portDesk h2 {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 500;
   color: #64748b;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
 }
 
-.DeskProf h2 span {
+.portDesk h2 span {
+  font-size: 24px;
+  line-height: 32px;
   color: #f8fafc;
-}
-
-.DeskProf p {
-  margin-bottom: 2.5rem;
   font-weight: 500;
-  line-height: 1.625;
-  color: #64748b;
 }
 
-.DeskProf .BtnProf {
+.portDesk p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+.portDesk .portBtn {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.BtnProf a:nth-child(1) {
+.portBtn a:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,7 +164,7 @@ nav ul li:hover a {
   transition-delay: 0.2s;
 }
 
-.BtnProf a:nth-child(2) {
+.portBtn a:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,30 +181,30 @@ nav ul li:hover a {
   transition-duration: 400ms;
 }
 
-.BtnProf a:nth-child(1):hover {
+.portBtn a:nth-child(1):hover {
   border: 1px solid #14b8a6;
   background-color: transparent;
 }
 
-.BtnProf a:nth-child(2):hover {
+.portBtn a:nth-child(2):hover {
   background-color: #14b8a6;
 }
 
-.profile .ImgProf {
-  width: 53%;
+.portHome .portImg {
+  width: 50%;
   align-self: flex-end;
   padding-left: 16px;
-  padding-right: -25px;
+  padding-right: 10px;
 }
 
-.profile .ImgProf .MyImg {
+.portHome .portImg .myImgPort {
   position: relative;
   right: 0;
-  margin-top: 40px;
+  margin-top: 60px;
   line-height: 24px;
 }
 
-.ImgProf .MyImg img {
+.portImg .myImgPort img {
   position: relative;
   z-index: -10;
   margin-left: auto;
@@ -255,11 +218,11 @@ nav ul li:hover a {
   padding-bottom: 128px;
 }
 
-.container .AboutMe {
+.container .aboutMe {
   display: flex;
 }
 
-.AboutMe .ref1 {
+.aboutMe .ref1 {
   width: 50%;
   margin-bottom: 40px;
   padding-left: 16px;
@@ -292,7 +255,7 @@ nav ul li:hover a {
   color: #64748b;
 }
 
-.AboutMe .ref2 {
+.aboutMe .ref2 {
   width: 50%;
   padding-left: 16px;
   padding-right: 16px;
@@ -346,69 +309,67 @@ nav ul li:hover a {
 #galery {
   background-color: #1e293b;
   padding-top: 144px;
-  padding-bottom: 64px;
+  padding-bottom: 84px;
 }
 
-.container .GaleryHeader {
+.container .galeryHeader {
   width: 100%;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-.GaleryHeader .GHeader {
+.galeryHeader .gHeader {
   margin: 0 auto;
   margin-bottom: 64px;
   max-width: 576px;
   text-align: center;
 }
 
-.GHeader h4 {
-  margin-bottom: 8px;
+.gHeader h4 {
+  font-weight: 600;
   font-size: 18px;
   line-height: 28px;
-  font-weight: 600;
   color: #14b8a6;
+  margin-bottom: 8px;
 }
 
-.GHeader h2 {
+.gHeader h2 {
   margin-bottom: 16px;
-  font-size: 48px;
-  line-height: 1;
   font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
   color: #f8fafc;
 }
 
-.GHeader p {
+.gHeader p {
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
   color: #64748b;
 }
 
-.container .GaleryList {
+.galeryHeader .galeryList {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin: 0 auto;
+  gap: 40px;
 }
 
-.GaleryList .project {
+/* Mainkan Responsive */
+.galeryList .project {
   width: 40%;
-  margin-bottom: 48px;
   padding: 30px;
 }
 
-.project .GImg img {
+.project .gImg img {
   overflow: hidden;
   border-radius: 6px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   transition: 200ms;
 }
 
-.project .GImg img:hover {
+.project .gImg img:hover {
   transform: scale(1.1);
 }
 
@@ -451,20 +412,18 @@ nav ul li:hover a {
   padding-top: 144px;
 }
 
-.container .BlogHeader {
+.container .blogHeader {
   width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
-.BlogHeader .BHeader {
+.blogHeader .bHeader {
   margin: 0 auto;
   margin-bottom: 64px;
   max-width: 576px;
   text-align: center;
 }
 
-.BHeader h4 {
+.bHeader h4 {
   margin-bottom: 8px;
   font-size: 18px;
   line-height: 28px;
@@ -472,7 +431,7 @@ nav ul li:hover a {
   color: #14b8a6;
 }
 
-.BHeader h2 {
+.bHeader h2 {
   margin-bottom: 16px;
   font-size: 48px;
   line-height: 1;
@@ -480,31 +439,23 @@ nav ul li:hover a {
   color: #f8fafc;
 }
 
-.BHeader p {
+.bHeader p {
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
   color: #64748b;
 }
 
-.container .BlogNews {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.BlogNews .BlogList {
+.blogHeader .BlogList {
   width: 100%;
-  padding: 0 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .BlogList .BlogHead {
   background-color: #1e293b;
-  margin-bottom: 40px;
-  overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
@@ -547,19 +498,18 @@ nav ul li:hover a {
   padding-bottom: 128px;
 }
 
-.container .ContactHeader {
+.container .contactHeader {
   width: 100%;
-  padding: 16px 0;
 }
 
-.ContactHeader .CHeader {
+.contactHeader .cHeader {
   margin: 0 auto;
   margin-bottom: 64px;
   max-width: 576px;
   text-align: center;
 }
 
-.CHeader h4 {
+.cHeader h4 {
   margin-bottom: 8px;
   font-size: 18px;
   line-height: 28px;
@@ -567,7 +517,7 @@ nav ul li:hover a {
   color: #14b8a6;
 }
 
-.CHeader h2 {
+.cHeader h2 {
   margin-bottom: 16px;
   font-size: 48px;
   line-height: 1;
@@ -575,101 +525,95 @@ nav ul li:hover a {
   color: #f8fafc;
 }
 
-.CHeader p {
+.cHeader p {
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
   color: #64748b;
 }
 
-#myForm .MyCompo {
-  width: 66.666667%;
+.contactHeader form {
+  background: transparent;
+  width: 75%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.MyCompo div {
-  padding: 18px 0;
+form div {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.MyCompo div label {
+form div label {
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 700;
   color: #14b8a6;
+  margin-bottom: 5px;
 }
 
-.MyCompo div input {
-  width: 100%;
+form div input {
+  max-width: 100%;
   height: 25px;
+  border-radius: 6px;
+  background-color: #e2e8f0;
+  padding: 12px;
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #0f172a;
+  outline: none;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+form div input:focus,
+form div textarea:focus {
+  border: 1px solid #14b8a6;
+  outline: none;
+  box-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  --tw-ring-color: rgb(20 184 166);
+}
+
+form div textarea {
+  max-width: 100%;
   border-radius: 6px;
   background-color: #e2e8f0;
   padding: 12px;
   font-size: 17px;
   margin-top: 5px;
   color: #0f172a;
+  outline: none;
   border: 1px solid transparent;
   transition: 0.3s;
 }
 
-.MyCompo div input:focus {
-  border: 1px solid #14b8a6;
-  outline: none;
-  box-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  --tw-ring-color: rgb(20 184 166);
-}
-
-.MyCompo div input::selection {
+form div input::selection,
+form div textarea::selection {
   background-color: #334155;
   color: #f8fafc;
 }
 
-.MyCompo textarea {
-  margin-top: 5px;
-  height: 128px;
+form #btnKirim {
+  max-width: 100%;
+}
+
+#btnKirim button {
   width: 100%;
-  border-radius: 6px;
-  background-color: #e2e8f0;
-  border: 1px solid transparent;
-  padding: 12px;
+  margin-top: 40px;
   font-size: 16px;
-  color: #0f172a;
-  transition: 0.3s;
-}
-
-.MyCompo textarea::selection {
-  background-color: #334155;
-  color: #f8fafc;
-}
-
-.MyCompo textarea:focus {
-  border: 1px solid #14b8a6;
-  outline: none;
-  box-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  --tw-ring-color: rgb(20 184 166);
-}
-
-.MyCompo .BtnKirim {
-  width: 103%;
-}
-
-.BtnKirim button:nth-child(1) {
-  width: 100%;
-  border-radius: 12px;
-  background-color: #14b8a6;
-  font-size: 1rem /* 16px */;
-  line-height: 1.5rem /* 24px */;
+  line-height: 24px;
   padding: 12px 32px;
+  background-color: #14b8a6;
+  border-radius: 12px;
   font-weight: 600;
   color: #f8fafc;
   border: none;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.MyCompo div:nth-child(4) button:nth-child(1):hover {
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  background-color: #14b8a5ad;
 }
 
 footer {
@@ -680,15 +624,20 @@ footer {
 
 .container .FootLoad {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
 
 .FootLoad .identity {
+  width: 32%;
   margin-bottom: 48px;
-  width: 33.333333%;
+  margin-left: 20px;
   padding: 16px 0;
   font-weight: 500;
   color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .identity h2 {
@@ -711,9 +660,12 @@ footer {
 }
 
 .FootLoad .LogKategori {
-  width: 33.333333%;
+  width: 32%;
   margin-bottom: 48px;
   padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .LogKategori h3 {
@@ -743,9 +695,12 @@ footer {
 }
 
 .FootLoad .HyperLink {
-  width: 33.333333%;
+  width: 32%;
   margin-bottom: 48px;
   padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .HyperLink h3 {

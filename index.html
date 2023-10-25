@@ -3,95 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/meong.jfif" />
     <title>Portfolio | Muhamad Riansyah</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="navbar">
-          <div class="logo">
-            <a href="#" target="_blank">Muhamad Riansyah</a>
-          </div>
-          <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <nav id="nav-menu">
-            <ul>
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                    <path
-                      d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"
-                    />
-                  </svg>
-                  Home</a
-                >
-              </li>
-              <li>
-                <a href="#about">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                    <path
-                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
-                    />
-                  </svg>
-                  About</a
-                >
-              </li>
-              <li>
-                <a href="#galery">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
-                    <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
-                    <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
-                  </svg>
-                  Galery</a
-                >
-              </li>
-              <li>
-                <a href="#blog">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
-                    <path
-                      d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"
-                    />
-                    <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
-                  </svg>
-                  Blog</a
-                >
-              </li>
-              <li>
-                <a href="#contact">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
-                    <path
-                      d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                    />
-                    <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
-                  </svg>
-                  Contact</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
+    <nav>
+      <div class="nameTag">
+        <a href="">Muhamad Riansyah</a>
       </div>
-    </header>
+      <ul>
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+              <path
+                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"
+              />
+            </svg>
+            Home</a
+          >
+        </li>
+        <li>
+          <a href="#about">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
+              />
+            </svg>
+            About</a
+          >
+        </li>
+        <li>
+          <a href="#galery">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+              <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+              <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
+            </svg>
+            Galery</a
+          >
+        </li>
+        <li>
+          <a href="#blog">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+              <path
+                d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"
+              />
+              <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
+            </svg>
+            Blog</a
+          >
+        </li>
+        <li>
+          <a href="#contact">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+              <path
+                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+              />
+              <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
 
     <section id="home">
       <div class="container">
-        <div class="profile">
-          <div class="DeskProf">
+        <div class="portHome">
+          <div class="portDesk">
             <h1>Halo Semua ✌🏻, saya <br /><span>Muhamad Riansyah</span></h1>
             <h2>Student | <span>SMK Letris Indonesia 1</span></h2>
             <p>Seorang pelajar dari SMK Letris Indonesia 1 sejak tahun 2021 dengan jurusan TKJ yang saya ambil.</p>
-            <div class="BtnProf">
+            <div class="portBtn">
               <a href="#contact">Contact Me</a>
-              <a href="">Download CV</a>
+              <a href="img/profile.png" download="Muhamad Riansyah CV">Download CV</a>
             </div>
           </div>
-          <div class="ImgProf">
-            <div class="MyImg">
-              <img src="img/meong.jfif" alt="My Image" />
+          <div class="portImg">
+            <div class="myImgPort">
+              <img src="img/meong.jfif" alt="Image" />
             </div>
           </div>
         </div>
@@ -100,7 +90,7 @@
 
     <section id="about">
       <div class="container">
-        <div class="AboutMe">
+        <div class="aboutMe">
           <div class="ref1">
             <h4>About Me</h4>
             <h2>Motivasi selalu membuatku selalu bersemangat</h2>
@@ -138,7 +128,9 @@
               <!-- Github -->
               <a href="https://github.com/RianDoang/" target="_blank" title="Linkeind">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  />
                 </svg>
               </a>
             </div>
@@ -149,38 +141,36 @@
 
     <section id="galery">
       <div class="container">
-        <div class="GaleryHeader">
-          <div class="GHeader">
+        <div class="galeryHeader">
+          <div class="gHeader">
             <h4>Galery</h4>
             <h2>The Project</h2>
             <p>Ini adalah kumpulan project yang saya buat sedemikian rupa, dari berawal saya membuat landing page pertama saya sampai sekaran ini.</p>
           </div>
-        </div>
-        <div class="GaleryList">
-          <!-- List Project -->
-          <div class="project">
-            <div class="GImg">
-              <img src="img/project/Fun-Page.jpg" alt="My Project" width="100%" />
+          <div class="galeryList">
+            <!-- List Project -->
+            <div class="project">
+              <div class="gImg">
+                <img src="img/project/Fun-Page.jpg" alt="My Project" width="100%" />
+              </div>
+              <h3>Fun Page</h3>
+              <p>Page yang sangat absurd dan saya menyukainya</p>
+              <a href="">Lihat Selengkapnya</a>
             </div>
-            <h3>Fun Page</h3>
-            <p>Page yang sangat absurd dan saya menyukainya</p>
-            <a href="">Lihat Selengkapnya</a>
+            <!-- End List Project -->
           </div>
-          <!-- End List Project -->
         </div>
       </div>
     </section>
 
     <section id="blog">
       <div class="container">
-        <div class="BlogHeader">
-          <div class="BHeader">
+        <div class="blogHeader">
+          <div class="bHeader">
             <h4>Blog</h4>
             <h2>Latest Posts</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quisquam perspiciatis blanditiis dolores?</p>
           </div>
-        </div>
-        <div class="BlogNews">
           <div class="BlogList">
             <div class="BlogHead">
               <img src="https://source.unsplash.com/360x200?programming" alt="" width="100%" />
@@ -210,32 +200,31 @@
 
     <section id="contact">
       <div class="container">
-        <div class="ContactHeader">
-          <div class="CHeader">
+        <div class="contactHeader">
+          <div class="cHeader">
             <h4>Contact</h4>
             <h2>Contact Me</h2>
             <p>Au dah coba-coba aja, ini cuma fitur tambahan aja biar ga terlalu sepi hehe.</p>
           </div>
-        </div>
-        <form id="myForm">
-          <div class="MyCompo">
+          <form id="myForm">
             <div>
               <label for="name">Nama</label>
-              <input type="text" id="name" name="nama" />
+              <input type="text" id="name" name="nama">
             </div>
             <div>
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" />
+              <input type="email" id="email" name="email" required>
             </div>
             <div>
               <label for="pesan">Pesan</label>
-              <textarea name="email" id="pesan" name="pesan" cols="30" rows="10"></textarea>
+              <textarea name="email" id="pesan" name="pesan" cols="30" rows="10" spellcheck="false"></textarea>
             </div>
-            <div class="BtnKirim">
-              <button class="btn-kirim" onclick="sendMail()">Kirim</button>
+            <div id="btnKirim">
+              <button>Kirim</button>
+              
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -260,7 +249,7 @@
           <div class="HyperLink">
             <h3>Linked</h3>
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#galery">Galery</a></li>
               <li><a href="#blog">Blog</a></li>
@@ -306,5 +295,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="src/script.js"></script>
   </body>
 </html>
