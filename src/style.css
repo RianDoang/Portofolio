@@ -9,6 +9,8 @@
 
 body {
   background: #0f172a;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -54,6 +56,33 @@ nav .nameTag a:hover {
   border-bottom: 1px solid rgb(128, 128, 128);
 }
 
+.dNone {
+  display: none;
+  opacity: 0;
+}
+
+nav .hamburger-menu {
+  display: none;
+}
+
+.hamburger-active > span:nth-child(1) {
+  margin-left: 10px;
+
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.hamburger-active > span:nth-child(2) {
+  transform: scale(0);
+  margin-left: 10px;
+}
+
+.hamburger-active > span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  margin-left: 10px;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -88,7 +117,7 @@ nav ul li:hover a {
 }
 
 #home {
-  padding-top: 45px;
+  padding-top: 50px;
 }
 
 .container .portHome {
@@ -224,7 +253,6 @@ nav ul li:hover a {
 
 .aboutMe .ref1 {
   width: 50%;
-  margin-bottom: 40px;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -599,9 +627,14 @@ form div textarea::selection {
 
 form #btnKirim {
   max-width: 100%;
+  position: relative;
 }
 
-#btnKirim button {
+#btnKirim button:nth-child(1) {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   margin-top: 40px;
   font-size: 16px;
@@ -614,6 +647,48 @@ form #btnKirim {
   border: none;
   cursor: pointer;
   transition: 0.3s;
+}
+
+#btnKirim button:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 32px;
+  background-color: #14b8a6;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #f8fafc;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.loader {
+  width: 25px;
+  height: 25px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 footer {
@@ -777,4 +852,196 @@ footer {
   font-weight: 700;
   color: #14b8a6;
   text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  nav .nameTag a {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  nav .hamburger-menu {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px;
+  }
+
+  .hamburger-menu span {
+    z-index: -1000;
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #e2e8f0;
+    transition: 200ms ease-in-out;
+  }
+
+  nav ul {
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: -30px;
+    width: 180px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+  }
+
+  .portHome {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portHome .portDesk {
+    width: 100%;
+    padding: 0;
+  }
+
+  .portDesk h1 {
+    font-size: 1rem /* 16px */;
+    line-height: 1.5rem /* 24px */;
+    width: 80%;
+  }
+
+  .portDesk h1 span {
+    font-size: 2.25rem /* 36px */;
+    line-height: 2.5rem /* 40px */;
+  }
+
+  .portDesk h2 {
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+  }
+
+  .portDesk h2 span {
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+  }
+
+  .portBtn a:nth-child(1) {
+    height: 50px;
+  }
+
+  .portBtn a:nth-child(2) {
+    height: 50px;
+  }
+
+  .portHome .portImg {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container .aboutMe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .aboutMe .ref1 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .ref1 h2 {
+    font-size: 1.875rem /* 30px */;
+    line-height: 2.25rem /* 36px */;
+  }
+
+  .ref1 p {
+    font-size: 1rem /* 16px */;
+    line-height: 1.5rem /* 24px */;
+  }
+
+  .aboutMe .ref2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .ref2 h3 {
+    font-size: 1.5rem /* 24px */;
+    line-height: 2rem /* 32px */;
+  }
+
+  .ref2 p {
+    font-size: 1rem /* 16px */;
+    line-height: 1.5rem /* 24px */;
+  }
+
+  .container .galeryHeader {
+    width: 100%;
+    padding: 0;
+  }
+
+  .galeryHeader .gHeader h2 {
+    font-size: 1.875rem /* 30px */;
+    line-height: 2.25rem /* 36px */;
+  }
+
+  .galeryHeader .gHeader p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem; /* 24px */
+  }
+
+  .galeryHeader .galeryList .project {
+    width: 100%;
+  }
+
+  .bHeader h2 {
+    font-size: 1.875rem /* 30px */;
+    line-height: 2.25rem /* 36px */;
+  }
+
+  .bHeader p {
+    font-size: 1rem /* 16px */;
+    line-height: 1.5rem /* 24px */;
+  }
+
+  .cHeader h2 {
+    font-size: 1.875rem /* 30px */;
+    line-height: 2.25rem /* 36px */;
+  }
+
+  .cHeader p {
+    font-size: 1rem /* 16px */;
+    line-height: 1.5rem /* 24px */;
+  }
+
+  .contactHeader form {
+    width: 100%;
+  }
+
+  .container .FootLoad {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .FootLoad .identity {
+    width: 100%;
+    margin: 0;
+  }
+
+  .FootLoad .LogKategori {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .FootLoad .HyperLink {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
 }
