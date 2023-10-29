@@ -1,10 +1,10 @@
 // Hamburger menu
 const hamburger = document.querySelector(".hamburger-menu");
-const navMenu = document.querySelector("#nav-menu");
+const navMenu = document.querySelector("nav ul");
 
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("hamburger-active");
-  navMenu.classList.toggle("dNone");
+  navMenu.classList.toggle("show");
 });
 
 // Klik diluar hamburger
@@ -36,7 +36,7 @@ function validate() {
 validate();
 
 function sendmail(name, email, pesan) {
-  emailjs.send("service_9o4p2pa","template_dd8ebfh", {
+  emailjs.send("service_9o4p2pa", "template_dd8ebfh", {
     from_name: name,
     to_name: email,
     message: pesan,
