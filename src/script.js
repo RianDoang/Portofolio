@@ -11,7 +11,7 @@ hamburger.addEventListener("click", function () {
 window.addEventListener("click", function (e) {
   if (e.target != hamburger && e.target != navMenu) {
     hamburger.classList.remove("hamburger-active");
-    navMenu.classList.add("dNone");
+    navMenu.classList.remove("show");
   }
 });
 
@@ -42,3 +42,16 @@ function sendmail(name, email, pesan) {
     message: pesan,
   });
 }
+
+var i = 0,
+  text;
+text = "Selamat Datang di MuhdannyBlog!! Enjoy......";
+
+function ketik() {
+  if (i < text.length) {
+    document.getElementById("text").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(ketik, 80);
+  }
+}
+ketik();
