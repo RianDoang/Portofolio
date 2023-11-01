@@ -15,21 +15,46 @@ window.addEventListener("click", function (e) {
   }
 });
 
+const formAlert = document.querySelector(".formAlert");
+const alertClose = document.querySelector(".alertClose");
+
+alertClose.addEventListener("click", function () {
+  formAlert.style.opacity = "0";
+  setTimeout(() => {
+    formAlert.style.display = "none";
+  }, 100);
+  setTimeout(() => {
+    formAlert.style.opacity = "1";
+  }, 50);
+});
+
 function validate() {
+  const formAlert = document.querySelector(".formAlert");
+  const form = document.querySelector("form");
+  const btnLoading = document.querySelector(".btn-loading");
   let name = document.querySelector("#name");
   let email = document.querySelector("#email");
   let pesan = document.querySelector("#pesan");
   let btnKirim = document.querySelector(".btn-kirim");
 
+  btnLoading.style.display = "none";
+  formAlert.style.display = "none";
+
   btnKirim.addEventListener("click", function (e) {
     e.preventDefault();
-
     if (name.value == "" || email.value == "" || pesan.value == "") {
       inputempty();
     } else {
       sendmail(name.value, email.value, pesan.value);
-
       console.log("Pesan berhasil terkirim");
+      btnKirim.style.display = "none";
+      btnLoading.style.display = "flex";
+      setTimeout(() => {
+        btnLoading.style.display = "none";
+        btnKirim.style.display = "flex";
+        formAlert.style.display = "flex";
+        form.reset();
+      }, 3000);
     }
   });
 }
@@ -42,16 +67,3 @@ function sendmail(name, email, pesan) {
     message: pesan,
   });
 }
-
-var i = 0,
-  text;
-text = "Selamat Datang di MuhdannyBlog!! Enjoy......";
-
-function ketik() {
-  if (i < text.length) {
-    document.getElementById("text").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(ketik, 80);
-  }
-}
-ketik();
