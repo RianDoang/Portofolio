@@ -45,15 +45,23 @@ nav .nameTag a {
   color: #f8fafc;
   margin-left: 55px;
   letter-spacing: 1px;
-  border-bottom: 1px solid transparent;
   border-radius: 2px;
   letter-spacing: 1px;
-  transition-duration: 500ms;
-  transition-delay: 0.3s;
 }
 
-nav .nameTag a:hover {
-  border-bottom: 1px solid rgb(128, 128, 128);
+nav .nameTag a::after {
+  content: '';
+  width: 80%;
+  display: block;
+  border-bottom: 1px solid #14b8a6;
+  transition: 0.2s linear;
+  margin-left: 55px;
+  transition-delay: 0.3s;
+  transform: scaleX(0);
+}
+
+nav .nameTag a:hover::after {
+  transform: scaleX(1);
 }
 
 nav .hamburger-menu {
@@ -820,8 +828,16 @@ footer {
   transition: 0.3s;
 }
 
-.LogKategori ul li a:hover {
-  color: #14b8a6;
+.LogKategori ul li a:after {
+  content: '';
+  border-bottom: 1px solid aqua;
+  width: 0;
+  display: block;
+  transition: 0.2s linear;
+}
+
+.LogKategori ul li a:hover::after {
+  width: 100%;
 }
 
 .FootLoad .HyperLink {
@@ -855,8 +871,17 @@ footer {
   transition: 0.3s;
 }
 
-.HyperLink ul li a:hover {
-  color: #14b8a6;
+.HyperLink ul li a::after {
+  content: '';
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid aqua;
+  transition: 0.2s linear;
+  transform: scaleX(0);
+}
+
+.HyperLink ul li a:hover::after {
+  transform: scaleX(1);
 }
 
 .container .FootLink {
@@ -921,6 +946,11 @@ footer {
     margin-left: 20px;
   }
 
+  nav .nameTag a::after {
+    width: 91%;
+    margin-left: 20px;
+  }
+
   nav .hamburger-menu {
     margin-right: 15px;
     display: flex;
@@ -951,6 +981,7 @@ footer {
     border: 1px solid #cbd5e1;
     border-radius: 6px;
     transform: translateY(-20px);
+    background-color: #0f172ae1;
   }
 
   nav ul.show {
