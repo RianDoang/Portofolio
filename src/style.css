@@ -424,9 +424,10 @@ nav ul li:hover a {
 }
 
 .project a {
+  margin-top: 5px;
   border-radius: 8px;
   background-color: #14b8a6;
-  padding: 8px 16px;
+  padding: 9px 16px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
