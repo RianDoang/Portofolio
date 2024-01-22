@@ -96,6 +96,7 @@ function validate() {
       setTimeout(() => {
         btn2.style.opacity = "1";
         btn2.style.transform = "translateY(0)";
+        formAlert.style.display = "flex";
         form.reset();
       }, 4200);
     }
