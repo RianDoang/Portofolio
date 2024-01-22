@@ -711,11 +711,12 @@ form #btnKirim {
   position: relative;
 }
 
-#btnKirim button:nth-child(1) {
+#btnKirim button {
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   margin-top: 40px;
   font-size: 16px;
@@ -727,10 +728,9 @@ form #btnKirim {
   color: #f8fafc;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-#btnKirim button:nth-child(2) {
+/* #btnKirim button:nth-child(2) {
   position: relative;
   display: flex;
   align-items: center;
@@ -747,7 +747,7 @@ form #btnKirim {
   border: none;
   cursor: default;
   transition: 0.3s;
-}
+} */
 
 .formAlert {
   background-color: #29c47bb0;
@@ -909,7 +909,7 @@ footer {
   border-bottom: 1px solid aqua;
   width: 0;
   display: block;
-  transition: 0.2s linear;
+  transition: 0.3s linear;
 }
 
 .LogKategori ul li a:hover::after {

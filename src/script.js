@@ -31,13 +31,27 @@ alertClose.addEventListener("click", function () {
 function validate() {
   const formAlert = document.querySelector(".formAlert");
   const form = document.querySelector("form");
-  const btnLoading = document.querySelector(".btn-loading");
+  const btn2 = document.querySelector("#btn2");
+  const btn3 = document.querySelector("#btn3");
+  const btn4 = document.querySelector("#btn4");
+  //const btnLoading = document.querySelector(".btn-loading");
   let name = document.querySelector("#name");
   let email = document.querySelector("#email");
   let pesan = document.querySelector("#pesan");
   let btnKirim = document.querySelector(".btn-kirim");
 
-  btnLoading.style.display = "none";
+  //btnLoading.style.display = "none";
+  btn2.style.opacity = "1";
+  btn2.style.transition = ".3s";
+
+  btn3.style.opacity = "0";
+  btn3.style.transition = ".3s";
+  btn3.style.display = "none";
+
+  btn4.style.display = "none";
+  btn4.style.transition = ".3s";
+  btn4.style.display = "none";
+
   formAlert.style.display = "none";
 
   btnKirim.addEventListener("click", function (e) {
@@ -47,14 +61,43 @@ function validate() {
     } else {
       sendmail(name.value, email.value, pesan.value);
       console.log("Pesan berhasil terkirim");
-      btnKirim.style.display = "none";
-      btnLoading.style.display = "flex";
+
+      // btn2 fadeUp
+      btn2.style.transform = "translateY(-10px)";
+      btn2.style.opacity = "0";
+      btn3.style.opacity = "0";
+      btn3.style.transform = "translateY(10px)";
+
+      // btn2 hilang dan btn3 muncul
       setTimeout(() => {
-        btnLoading.style.display = "none";
-        btnKirim.style.display = "flex";
-        formAlert.style.display = "flex";
+        btn2.style.display = "none";
+        btn3.style.display = "flex";
+      }, 100);
+
+      // btn3 fadeUp dan loading data send
+      setTimeout(() => {
+        btn3.style.opacity = "1";
+        btn3.style.transform = "translateY(0px)";
+      }, 300);
+
+      setTimeout(() => {
+        btn3.style.transform = "translateY(-10px)";
+        btn3.style.opacity = "0";
+      }, 4000);
+
+      setTimeout(() => {
+        btn3.style.transform = "translateY(10px)";
+        btn3.style.display = "none";
+        btn2.style.display = "flex";
+        btn2.style.opacity = "0";
+        btn2.style.transform = "translateY(10px)";
+      }, 4100);
+
+      setTimeout(() => {
+        btn2.style.opacity = "1";
+        btn2.style.transform = "translateY(0)";
         form.reset();
-      }, 3000);
+      }, 4200);
     }
   });
 }
@@ -137,10 +180,10 @@ function checkScroll() {
     startAnimation1();
     setTimeout(() => {
       startAnimation2();
-    }, 300);
+    }, 200);
     setTimeout(() => {
       startAnimation3();
-    }, 450);
+    }, 350);
     window.removeEventListener("scroll", checkScroll); // Hapus event listener setelah diaktifkan
   }
 }
