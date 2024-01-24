@@ -47,6 +47,10 @@ nav .nameTag a {
   letter-spacing: 1px;
   border-radius: 2px;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #mobile {
@@ -55,11 +59,10 @@ nav .nameTag a {
 
 nav .nameTag a::after {
   content: "";
-  width: 80%;
+  width: 100%;
   display: block;
   border-bottom: 1px solid #14b8a6;
   transition: 0.2s linear;
-  margin-left: 55px;
   transition-delay: 0.3s;
   transform: scaleX(0);
 }
@@ -1035,8 +1038,7 @@ footer {
   }
 
   nav .nameTag a::after {
-    width: 91%;
-    margin-left: 20px;
+    width: 100%;
   }
 
   nav .hamburger-menu {
