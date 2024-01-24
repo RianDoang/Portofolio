@@ -40,14 +40,16 @@ function validate() {
   let pesan = document.querySelector("#pesan");
   let btnKirim = document.querySelector(".btn-kirim");
 
-  //btnLoading.style.display = "none";
+  // Btn Kirim
   btn2.style.opacity = "1";
   btn2.style.transition = ".3s";
 
+  // Btn Sending data
   btn3.style.opacity = "0";
   btn3.style.transition = ".3s";
   btn3.style.display = "none";
 
+  // Btn Data mengudara
   btn4.style.display = "none";
   btn4.style.transition = ".3s";
   btn4.style.display = "none";
@@ -62,19 +64,16 @@ function validate() {
       sendmail(name.value, email.value, pesan.value);
       console.log("Pesan berhasil terkirim");
 
-      // btn2 fadeUp
       btn2.style.transform = "translateY(-10px)";
       btn2.style.opacity = "0";
       btn3.style.opacity = "0";
       btn3.style.transform = "translateY(10px)";
 
-      // btn2 hilang dan btn3 muncul
       setTimeout(() => {
         btn2.style.display = "none";
         btn3.style.display = "flex";
       }, 100);
 
-      // btn3 fadeUp dan loading data send
       setTimeout(() => {
         btn3.style.opacity = "1";
         btn3.style.transform = "translateY(0px)";
@@ -83,22 +82,40 @@ function validate() {
       setTimeout(() => {
         btn3.style.transform = "translateY(-10px)";
         btn3.style.opacity = "0";
+        btn4.style.opacity = "0";
+        btn4.transform = "translateY(10px)";
       }, 4000);
 
       setTimeout(() => {
         btn3.style.transform = "translateY(10px)";
         btn3.style.display = "none";
+        btn4.style.display = "flex";
+        btn4.style.transform = "translateY(10px)";
+      }, 4100);
+
+      setTimeout(() => {
+        btn4.style.opacity = "1";
+        btn4.style.transform = "translateY(0)";
+        formAlert.style.display = "flex";
+        form.reset();
+      }, 4200);
+
+      setTimeout(() => {
+        btn4.style.opacity = "0";
+        btn4.style.transform = "translateY(-10px)";
+      }, 5200);
+
+      setTimeout(() => {
+        btn4.style.display = "none";
         btn2.style.display = "flex";
         btn2.style.opacity = "0";
         btn2.style.transform = "translateY(10px)";
-      }, 4100);
+      }, 5300);
 
       setTimeout(() => {
         btn2.style.opacity = "1";
         btn2.style.transform = "translateY(0)";
-        formAlert.style.display = "flex";
-        form.reset();
-      }, 4200);
+      }, 5500);
     }
   });
 }
@@ -112,6 +129,7 @@ function sendmail(name, email, pesan) {
   });
 }
 
+// HTML Skills
 function startAnimation1() {
   const progressBar1 = document.getElementById("barProgress1");
   const percentageElement1 = document.getElementById("persenBar1");
@@ -132,6 +150,7 @@ function startAnimation1() {
   }, 21);
 }
 
+// CSS Skills
 function startAnimation2() {
   const progressBar2 = document.getElementById("barProgress2");
   const percentageElement2 = document.getElementById("persenBar2");
@@ -152,6 +171,7 @@ function startAnimation2() {
   }, 21);
 }
 
+// JS Skills
 function startAnimation3() {
   const progressBar3 = document.getElementById("barProgress3");
   const percentageElement3 = document.getElementById("persenBar3");

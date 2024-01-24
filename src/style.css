@@ -49,6 +49,10 @@ nav .nameTag a {
   letter-spacing: 1px;
 }
 
+#mobile {
+  display: none;
+}
+
 nav .nameTag a::after {
   content: "";
   width: 80%;
@@ -529,7 +533,7 @@ nav ul li:hover a {
 
 .skillBar .barProgress {
   position: relative;
-  background-color: #14b8a6;
+  background-color: rgba(20, 184, 165, 0.5);
   height: 100%;
   border-radius: 10px 20px 20px 10px;
   width: 0;
@@ -1020,6 +1024,14 @@ footer {
   nav .nameTag a {
     font-size: 20px;
     margin-left: 20px;
+  }
+
+  #desktop {
+    display: none;
+  }
+
+  #mobile {
+    display: flex;
   }
 
   nav .nameTag a::after {
