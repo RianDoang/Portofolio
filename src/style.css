@@ -536,7 +536,7 @@ nav ul li:hover a {
 
 .skillBar .barProgress {
   position: relative;
-  background-color: rgba(20, 184, 165, 0.5);
+  background-color: #14b8a6;
   height: 100%;
   border-radius: 10px 20px 20px 10px;
   width: 0;
@@ -898,7 +898,7 @@ footer {
 
 .LogKategori ul {
   list-style: none;
-  transform: translateX(-25px);
+  transform: translateX(5px);
 }
 
 .LogKategori ul li a {
